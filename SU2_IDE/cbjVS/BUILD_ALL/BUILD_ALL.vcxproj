@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="MPI|x64">
+      <Configuration>MPI</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CBJ_DEF\CBJ_DEF.vcxproj">
+      <Project>{cbba8584-663a-4e5a-b612-54e11678a0af}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_CFD\SU2_CFD.vcxproj">
+      <Project>{5b06f599-6225-45e9-890c-fd295ef39aed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_DEF\SU2_DEF.vcxproj">
+      <Project>{b8c76e27-3ac7-4a1e-9af5-9f0033e8ab1a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_DOT\SU2_DOT.vcxproj">
+      <Project>{bcc809a0-e318-4b56-800f-95f33c3bf6db}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_GEO\SU2_GEO.vcxproj">
+      <Project>{de458d3d-63c0-4913-b828-813019390cef}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_LIB\SU2_LIB.vcxproj">
+      <Project>{3eeb3a29-61d7-4296-8400-7629b1ce52eb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_MSH\SU2_MSH.vcxproj">
+      <Project>{616cac92-a69a-4f62-99d6-660f16c31cfa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SU2_SOL\SU2_SOL.vcxproj">
+      <Project>{78cf293d-647e-45d0-9f9d-a7efcf1d1656}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="install.py" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98103359-008E-44BB-8B85-746DF04F68F6}</ProjectGuid>
+    <RootNamespace>BUILD_ALL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI|x64'" Label="Configuration">
+    <PlatformToolset>v120</PlatformToolset>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI|x64'">
+    <NMakeBuildCommandLine>install.py -s $(SolutionDir)$(Platform)\$(Configuration)\ -d $(SolutionDir)\bin</NMakeBuildCommandLine>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

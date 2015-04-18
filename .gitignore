@@ -36,3 +36,19 @@ Makefile
 contrib/autotools/bin
 contrib/autotools/include
 contrib/autotools/share
+
+# SU2_IDE/cbjVS settings
+SU2_IDE/cbjVS/eigen
+SU2_IDE/cbjVS/METIS
+SU2_IDE/cbjVS/bin
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sdf
+*.pdb
+*.obj
+*.log
+Release
+Debug
+x64/MPI

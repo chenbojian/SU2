@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="MPI|x64">
+      <Configuration>MPI</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3EEB3A29-61D7-4296-8400-7629B1CE52EB}</ProjectGuid>
+    <RootNamespace>SU2_LIB</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='MPI|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MPI|x64'">
+    <Import Project="..\SU2_EXE.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\src\config_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\dual_grid_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\geometry_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\grid_adaptation_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\grid_movement_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\linear_solvers_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\matrix_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\primal_grid_structure.cpp" />
+    <ClCompile Include="..\..\..\Common\src\su2mpi.cpp" />
+    <ClCompile Include="..\..\..\Common\src\vector_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\definition_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\fluid_model.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\fluid_model_pig.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\fluid_model_ppr.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\fluid_model_pvdw.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\integration_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\integration_time.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\iteration_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_adjoint_levelset.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_adjoint_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_adjoint_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_adjoint_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_elasticity.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_heat.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_poisson.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_transition.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_direct_wave.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_linearized_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_linearized_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_machine_learning.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_machine_learning_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\numerics_template.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\output_cgns.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\output_paraview.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\output_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\output_su2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\output_tecplot.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_adjoint_levelset.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_adjoint_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_adjoint_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_adjoint_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_elasticity.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_heat.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_poisson.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_transition.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_direct_wave.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_linearized_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_linearized_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\solver_template.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\transport_model.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_adjoint_levelset.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_adjoint_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_adjoint_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_adjoint_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_elasticity.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_heat.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_poisson.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_tne2.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_transition.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_direct_wave.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_linearized_mean.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_linearized_turbulent.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_structure.cpp" />
+    <ClCompile Include="..\..\..\SU2_CFD\src\variable_template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\include\config_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\dual_grid_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\geometry_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\grid_adaptation_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\grid_movement_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\linear_solvers_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\matrix_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\option_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\primal_grid_structure.hpp" />
+    <ClInclude Include="..\..\..\Common\include\su2mpi.hpp" />
+    <ClInclude Include="..\..\..\Common\include\vector_structure.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Common\include\config_structure.inl" />
+    <None Include="..\..\..\Common\include\dual_grid_structure.inl" />
+    <None Include="..\..\..\Common\include\geometry_structure.inl" />
+    <None Include="..\..\..\Common\include\grid_adaptation_structure.inl" />
+    <None Include="..\..\..\Common\include\grid_movement_structure.inl" />
+    <None Include="..\..\..\Common\include\linear_solvers_structure.inl" />
+    <None Include="..\..\..\Common\include\matrix_structure.inl" />
+    <None Include="..\..\..\Common\include\primal_grid_structure.inl" />
+    <None Include="..\..\..\Common\include\vector_structure.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
