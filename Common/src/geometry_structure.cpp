@@ -11282,7 +11282,8 @@ void CPeriodicGeometry::SetMeshFile(CGeometry *geometry, CConfig *config, string
   /*--- Change the numbering to guarantee that the all the receive
    points are at the end of the file ---*/
   unsigned long OldnPoint = geometry->GetnPoint();
-  unsigned long NewSort[nPoint];
+  //unsigned long NewSort[nPoint];//only support in gcc
+  unsigned long *NewSort = new unsigned long[nPoint];
   for (iPoint = 0; iPoint < nPoint; iPoint++) {
     NewSort[iPoint] = iPoint;
   }
@@ -11395,7 +11396,7 @@ void CPeriodicGeometry::SetMeshFile(CGeometry *geometry, CConfig *config, string
   
   
   output_file.close();
-  
+  delete[] NewSort;
 }
 
 void CPeriodicGeometry::SetTecPlot(char mesh_filename[MAX_STRING_SIZE]) {

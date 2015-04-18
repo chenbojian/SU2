@@ -185,7 +185,7 @@ void CVanDerWaalsGas::SetTDState_hs (double h, double s ){
 	cons_h= abs(((StaticEnergy + Pressure/Density) - h)/h);
 	cons_s= abs((Entropy-s)/s);
 
-	if(cons_h >1e-3 or cons_s >1e-3){
+	if(cons_h >1e-3 || cons_s >1e-3){
 		cout<< "TD consistency not verified in hs call"<< endl;
 	}
 

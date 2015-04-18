@@ -951,7 +951,7 @@ void COutput::MergeCoordinates(CConfig *config, CGeometry *geometry) {
   double *Buffer_Send_Y = new double[MaxLocalPoint];
   double *Buffer_Recv_Y = NULL;
   
-  double *Buffer_Send_Z, *Buffer_Recv_Z = NULL;
+  double *Buffer_Send_Z=nullptr, *Buffer_Recv_Z = NULL;
   if (nDim == 3) Buffer_Send_Z = new double[MaxLocalPoint];
   
   unsigned long *Buffer_Send_GlobalIndex = new unsigned long[MaxLocalPoint];
@@ -1076,7 +1076,7 @@ void COutput::MergeVolumetricConnectivity(CConfig *config, CGeometry *geometry, 
   unsigned long iElem = 0;
   unsigned long nLocalElem = 0, nElem_Total = 0;
   
-  int *Conn_Elem;
+  int *Conn_Elem=nullptr;
   
   /*--- Store the local number of this element type and the number of nodes
    per this element type. In serial, this will be the total number of this
@@ -1202,7 +1202,7 @@ void COutput::MergeVolumetricConnectivity(CConfig *config, CGeometry *geometry, 
   unsigned long MaxLocalElem = 0, iGlobal_Index, jPoint, kPoint;
   
   bool Wrt_Halo = config->GetWrt_Halo();
-  bool *Write_Elem, notPeriodic, notHalo, addedPeriodic;
+  bool *Write_Elem=nullptr, notPeriodic, notHalo, addedPeriodic;
   
   /*--- Find the max number of this element type among all
    partitions and set up buffers. ---*/
@@ -1505,7 +1505,7 @@ void COutput::MergeSurfaceConnectivity(CConfig *config, CGeometry *geometry, uns
   unsigned long iElem = 0;
   unsigned long nLocalElem = 0, nElem_Total = 0;
   
-  int *Conn_Elem;
+  int *Conn_Elem=nullptr;
   
   /*--- Store the local number of this element type and the number of nodes
    per this element type. In serial, this will be the total number of this
@@ -1626,7 +1626,7 @@ void COutput::MergeSurfaceConnectivity(CConfig *config, CGeometry *geometry, uns
   unsigned long MaxLocalElem = 0, iGlobal_Index, jPoint, kPoint;
   
   bool Wrt_Halo = config->GetWrt_Halo();
-  bool *Write_Elem, notPeriodic, notHalo, addedPeriodic;
+  bool *Write_Elem=nullptr, notPeriodic, notHalo, addedPeriodic;
   
   /*--- Find the max number of this element type among all
    partitions and set up buffers. ---*/

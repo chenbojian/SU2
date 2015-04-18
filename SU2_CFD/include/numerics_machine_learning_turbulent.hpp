@@ -34,6 +34,8 @@
 #endif
 #include <cmath>
 #include <iostream>
+//min and max function in this header
+#include <algorithm>
 
 using namespace std;
 

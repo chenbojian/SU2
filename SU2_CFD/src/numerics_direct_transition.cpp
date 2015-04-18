@@ -155,8 +155,9 @@ CAvgGrad_TransLM::~CAvgGrad_TransLM(void) {
 
 void CAvgGrad_TransLM::ComputeResidual(double *val_residual, double **Jacobian_i, double **Jacobian_j, CConfig *config) {
   
-  double Density_Grad_i[nDim], Density_Grad_j[nDim], Conservative_Grad_i[nDim], Conservative_Grad_j[nDim];
-  double Primitive_Grad_i[nDim], Primitive_Grad_j[nDim];
+  double *Density_Grad_i=new double[nDim], *Density_Grad_j=new double[nDim], 
+	  *Conservative_Grad_i=new double[nDim], *Conservative_Grad_j=new double[nDim];
+  double *Primitive_Grad_i=new double[nDim], *Primitive_Grad_j=new double[nDim];
   
   /*--- Intermediate values for combining viscosities ---*/
   double Inter_Viscosity_i, Inter_Viscosity_j, REth_Viscosity_i, REth_Viscosity_j, Inter_Viscosity_Mean, REth_Viscosity_Mean;
@@ -216,7 +217,12 @@ void CAvgGrad_TransLM::ComputeResidual(double *val_residual, double **Jacobian_i
 		Jacobian_i[1][1] = (0.5*Proj_Mean_GradTransVar_Kappa[1]-REth_Viscosity_Mean*proj_vector_ij);
 		Jacobian_j[1][1] = (0.5*Proj_Mean_GradTransVar_Kappa[1]+REth_Viscosity_Mean*proj_vector_ij);
 	}
-  
+	delete[] Density_Grad_i;
+	delete[] Density_Grad_j;
+	delete[] Conservative_Grad_i;
+	delete[] Conservative_Grad_j;
+	delete[] Primitive_Grad_i;
+	delete[] Primitive_Grad_j;
 }
 
 CAvgGradCorrected_TransLM::CAvgGradCorrected_TransLM(unsigned short val_nDim, unsigned short val_nVar,
