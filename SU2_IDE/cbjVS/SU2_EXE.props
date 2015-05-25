@@ -5,14 +5,14 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\chenbojian\github\SU2\SU2_IDE\cbjVS\eigen\include\eigen3;F:\chenbojian\github\SU2\SU2_IDE\cbjVS\METIS\include;C:\Program Files %28x86%29\Intel\IMPI\intel64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\eigen\include\eigen3;$(SolutionDir)\metis\include;C:\Program Files %28x86%29\Intel\IMPI\intel64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>HAVE_MPI;HAVE_METIS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <AdditionalDependencies>metis.lib;impi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Intel\IMPI\intel64\lib;F:\chenbojian\github\SU2\SU2_IDE\cbjVS\METIS\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\metis\lib;C:\Program Files %28x86%29\Intel\IMPI\intel64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
